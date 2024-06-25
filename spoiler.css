@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 80%;
+    margin: 30px auto;
+    position: relative;
+}
+
+.container > * {
+    width: 40%;
+}
+
+.spoiler {
+    border: 1px solid black;
+}
+
+.spoiler a.spoiler-header {
+    display: block;
+    color: inherit;
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    margin: 1px;
+    border: 2px solid black;
+}
+
+.spoiler .spoiler-header::before {
+    content: "[+] ";
+    font-family: monospace;
+    vertical-align: top;
+}
+
+.spoiler .spoiler-content {
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.spoiler.spoiler-shown .spoiler-header::before {
+    content: "[-] ";
+}
+
+.spoiler.spoiler-shown .spoiler-content {
+    padding: 10px;
+    max-height: 1000px;
+}
+
+.spoiler.spoiler-em a.spoiler-header {
+    color: white;
+    background-color: black;
+}
+
+.spoiler.spoiler-em a.spoiler-header {
+    border: 2px solid white;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoiler Web Component</title>
+    <link rel="stylesheet" href="spoiler.css">
+</head>
+<body>
+    <article class="container">
+        <div id="spl1">
+            <a class="spoiler-header" href="#">JavaScript</a>
+            <div class="spoiler-content">
+                <p>Мультипарадигменный язык программирования. Поддерживает
+                   объектно-ориентированный, императивный и функциональный стили.
+                   Является реализацией стандарта ECMAScript (стандарт ECMA-262).</p>
+                <p>Обычно используется как встраиваемый язык для программного доступа
+                   к объектам приложений. Наиболее широкое применение находит в
+                   браузерах как язык сценариев для придания интерактивности
+                   веб-страницам.</p>
+            </div>
+        </div>
+        <div id="spl2">
+            <a class="spoiler-header" href="#">TypeScript</a>
+            <div class="spoiler-content">
+                <p>Язык программирования, представленный Microsoft в 2012 году и
+                   позиционируемый как средство разработки веб-приложений, расширяющее
+                   возможности JavaScript.</p>
+                <p>Разработчиком языка TypeScript является Андерс Хейлсберг
+                   (англ. Anders Hejlsberg), создавший ранее Turbo Pascal, Delphi и
+                   C#.</p>
+            </div>
+        </div>
+    </article>
+    <script src="spoiler.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        const spoilers = Spoiler.init('spl1', 'spl2');
+    </script>
+</body>
+</html>
